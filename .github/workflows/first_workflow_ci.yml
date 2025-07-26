@@ -22,5 +22,5 @@ jobs:
   second_job:
     runs-on: ubuntu-latest
     steps:
-      -name: run second job step
-       run: echo Hello seconf job!!!
+      - name: Run a one-line script in second job
+        run: echo Hello, world in second job!
