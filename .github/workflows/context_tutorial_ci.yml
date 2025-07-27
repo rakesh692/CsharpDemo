@@ -1,0 +1,8 @@
+name: context_tutorial_ci
+on: workflow_dispatch
+jobs:
+  first_context_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        run: echo ${{toJson(github)}}       
