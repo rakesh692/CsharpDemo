@@ -5,4 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: first step
-        run: echo "${{toJson(github)}}"       
+        run: echo "${{toJson(github)}}"
+  second_context_job:
+    needs: first_context_job
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step of second job
+        run: echo "${{github.ref}} is the branch name"
+
